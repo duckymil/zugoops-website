@@ -1,0 +1,72 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zugo Ops dla wykonawców — zlecenia bez szukania klientów</title><meta name="description" content="Dołącz do sieci wykonawców Zugo Ops i otrzymuj propozycje prac przy obsłudze mieszkań i lokali."><meta name="theme-color" content="#071015">
+<link rel="icon" href="../favicon-64.png"><link rel="apple-touch-icon" href="../favicon.png">
+<style>
+:root{--bg:#071015;--surface:#0f222b;--surface2:#0b181e;--text:#f2f5f6;--muted:#a9b7bd;--mint:#24d7b5;--mint2:#a7f2db;--line:rgba(255,255,255,.095);--lineMint:rgba(36,215,181,.22);--card:rgba(255,255,255,.04);--red:#ff6a63;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 12% 3%,rgba(36,215,181,.10),transparent 28%),radial-gradient(circle at 88% 12%,rgba(28,133,181,.10),transparent 24%),linear-gradient(180deg,#071015,#09151b 54%,#071015);line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+.nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(16px);background:rgba(7,16,21,.84);border-bottom:1px solid rgba(255,255,255,.06)}.navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}.logo{height:40px}.links{display:flex;align-items:center;gap:25px;font-size:14px;color:#c6d0d4}.links a:hover{color:#fff}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:15px;font-weight:800;border:1px solid transparent}.primary{background:linear-gradient(135deg,var(--mint),#78e8c8);color:#062118;box-shadow:0 14px 40px rgba(36,215,181,.15)}.secondary{border-color:var(--line);background:rgba(255,255,255,.035)}
+.hero{padding:94px 0 70px}.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--lineMint);border-radius:999px;background:rgba(36,215,181,.055);color:#d0f5e8;font-weight:800;font-size:12px;margin-bottom:24px}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint)}h1{font-size:clamp(48px,6vw,76px);line-height:.99;letter-spacing:-.06em;margin:0}.accent{color:var(--mint2)}.hero p{color:var(--muted);font-size:19px;max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.visual{padding:18px;border-radius:30px;border:1px solid var(--lineMint);background:linear-gradient(180deg,rgba(36,215,181,.055),rgba(255,255,255,.025));box-shadow:0 30px 85px rgba(0,0,0,.3)}.visual img{display:block;width:100%;height:auto;border-radius:20px}
+section{padding:88px 0}.kicker{font-size:12px;color:var(--mint);text-transform:uppercase;letter-spacing:.13em;font-weight:900;margin-bottom:12px}h2{font-size:clamp(36px,4.5vw,55px);line-height:1.03;letter-spacing:-.045em;margin:0;max-width:880px}.lead{color:var(--muted);font-size:18px;max-width:780px;margin-top:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:42px}.card{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:25px}.icon{width:42px;height:42px;border-radius:13px;background:rgba(36,215,181,.09);border:1px solid rgba(36,215,181,.14);display:grid;place-items:center;color:var(--mint);font-weight:900;margin-bottom:28px}.card h3{margin:0 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}.step{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:22px}.num{width:35px;height:35px;border-radius:12px;background:rgba(36,215,181,.09);color:var(--mint);display:grid;place-items:center;font-weight:900;font-size:12px}.step h3{margin:28px 0 8px;font-size:18px}.step p{margin:0;color:var(--muted);font-size:14px}
+.band{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.018)}.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:55px;align-items:center}.checks{display:grid;gap:12px;margin-top:24px;color:#d4dde0}.checks div:before{content:"✓";color:var(--mint);font-weight:900;margin-right:9px}.note{font-size:13px;color:#83959c;margin-top:18px}
+.formWrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:50px;align-items:start}.formbox{padding:30px;border-radius:25px;border:1px solid var(--lineMint);background:linear-gradient(180deg,rgba(36,215,181,.055),rgba(255,255,255,.025))}.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800;color:#cbd6da}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.11);background:#0b181e;color:var(--text);border-radius:13px;padding:13px 14px;font:inherit;outline:none}.field input,.field select{min-height:49px}.field textarea{min-height:110px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(36,215,181,.55);box-shadow:0 0 0 3px rgba(36,215,181,.08)}.hint{grid-column:1/-1;color:#72858c;font-size:11px}.formActions{grid-column:1/-1}.formActions button{cursor:pointer}
+.faq{display:grid;gap:10px;margin-top:36px;max-width:900px}details{border:1px solid var(--line);border-radius:17px;background:var(--card);padding:18px 20px}summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between}summary:after{content:"+";color:var(--mint)}details[open] summary:after{content:"−"}details p{color:var(--muted)}
+footer{border-top:1px solid rgba(255,255,255,.07);padding:32px 0 44px;color:#788a91;font-size:12px}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot img{height:34px}.footlinks{display:flex;gap:16px;flex-wrap:wrap}.foot a{color:#a7f2db}
+@media(max-width:930px){.links>a:not(.btn){display:none}.heroGrid,.split,.formWrap{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.wrap{width:min(calc(100% - 28px),var(--max))}.navin{height:68px}.logo{height:34px}.hero{padding-top:64px}h1{font-size:47px}.grid3,.steps,.form{grid-template-columns:1fr}.full,.hint,.formActions{grid-column:1}.foot{flex-direction:column;align-items:flex-start}}
+</style></head><body>
+<nav class="nav"><div class="wrap navin"><a href="../"><img class="logo" src="../zugo-logo.png" alt="Zugo Ops"></a><div class="links"><a href="../zarzadcy/">Dla zarządców</a><a href="../wykonawcy/">Dla wykonawców</a><a href="../#jak">Jak to działa</a><a href="../#zakres">Zakres</a><a class="btn primary" href="#kontakt">Umów rozmowę</a></div></div></nav>
+
+<header class="hero"><div class="wrap heroGrid">
+<div><div class="eyebrow">Dla fachowców i firm usługowych</div><h1>Więcej zleceń. <span class="accent">Mniej szukania klientów.</span></h1>
+<p>Zugo łączy sprawdzonych wykonawców z zarządcami i właścicielami mieszkań. Otrzymujesz propozycje prac w swojej okolicy i sam decydujesz, które zlecenia przyjmujesz.</p>
+<div class="actions"><a class="btn primary" href="#kontakt">Dołącz do sieci Zugo →</a><a class="btn secondary" href="#jak">Jak to działa</a></div></div>
+<div class="visual"><img src="../contractor.svg" alt="Wykonawca współpracujący z Zugo Ops"></div>
+</div></header>
+
+<section><div class="wrap"><div class="kicker">Po co wykonawcy Zugo</div><h2>Zlecenia zamiast kupowania leadów.</h2>
+<p class="lead">Nie sprzedajemy kontaktu do klienta. Gdy pojawia się pasujące zgłoszenie, otrzymujesz konkretną propozycję zlecenia i warunkami do oceny.</p>
+<div class="grid3">
+<div class="card"><div class="icon">01</div><h3>Realne zlecenia</h3><p>Prace związane z obsługą mieszkań i lokali naszych klientów, a nie lista przypadkowych numerów telefonu.</p></div>
+<div class="card"><div class="icon">02</div><h3>Ty decydujesz</h3><p>Możesz przyjąć lub odrzucić propozycję zależnie od lokalizacji, zakresu i swojej dostępności.</p></div>
+<div class="card"><div class="icon">03</div><h3>Jasny proces</h3><p>Zakres, termin i sposób rozliczenia są ustalane w ramach zlecenia. Zugo koordynuje kontakt z klientem.</p></div>
+</div></div></section>
+
+<section class="band" id="jak"><div class="wrap"><div class="kicker">Jak wygląda współpraca</div><h2>Prosty proces od zgłoszenia do rozliczenia.</h2>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Dołączasz do sieci</h3><p>Podajesz specjalizację, obszar działania i podstawowe informacje o firmie.</p></div>
+<div class="step"><div class="num">2</div><h3>Dostajesz propozycję</h3><p>Zugo przesyła Ci zlecenie pasujące do Twojej specjalizacji i lokalizacji.</p></div>
+<div class="step"><div class="num">3</div><h3>Przyjmujesz pracę</h3><p>Po akceptacji ustalamy termin i przekazujemy potrzebne informacje.</p></div>
+<div class="step"><div class="num">4</div><h3>Kończysz zlecenie</h3><p>Po pracy podajesz koszt, notatkę i wymaganą dokumentację. Rozliczenie odbywa się według ustalonych warunków.</p></div>
+</div></div></section>
+
+<section><div class="wrap split"><div><div class="kicker">Kogo szukamy</div><h2>Fachowców, z którymi można budować stałą współpracę.</h2>
+<p class="lead">Najważniejsze są dla nas rzetelność, komunikacja i jakość wykonania. Zakres wymaganych uprawnień zależy od rodzaju prac.</p>
+<div class="checks"><div>hydraulicy i instalatorzy</div><div>elektrycy</div><div>złote rączki i drobne naprawy</div><div>inne specjalizacje potrzebne przy obsłudze mieszkań</div></div>
+<p class="note">Przed uruchomieniem współpracy ustalamy obszar działania, specjalizację, dane firmy oraz zasady realizacji zleceń.</p></div>
+<div class="visual"><img src="../collaboration.svg" alt="Współpraca wykonawcy z Zugo Ops"></div></div></section>
+
+<section id="kontakt"><div class="wrap formWrap"><div><div class="kicker">Dołącz do sieci</div><h2>Zostaw kontakt.</h2><p class="lead">Odezwiemy się, żeby poznać Twoją specjalizację, obszar działania i ustalić, czy możemy rozpocząć współpracę.</p></div>
+<div class="formbox"><form class="form" action="https://formsubmit.co/kontakt@zugoops.pl" method="POST">
+<input type="hidden" name="_subject" value="Nowy wykonawca — Zugo Ops"><input type="hidden" name="_next" value="https://zugoops.pl/dziekujemy.html">
+<div class="field"><label>Imię i nazwisko *</label><input name="Imię i nazwisko" required></div>
+<div class="field"><label>Nazwa firmy</label><input name="Firma"></div>
+<div class="field"><label>Telefon *</label><input type="tel" name="Telefon" required></div>
+<div class="field"><label>E-mail *</label><input type="email" name="email" required></div>
+<div class="field"><label>Miasto / obszar działania *</label><input name="Obszar działania" required></div>
+<div class="field"><label>Specjalizacja *</label><select name="Specjalizacja" required><option value="">Wybierz</option><option>Hydraulika</option><option>Elektryka</option><option>Złota rączka</option><option>Prace remontowe</option><option>Inna</option></select></div>
+<div class="field full"><label>Napisz krótko o swoim doświadczeniu</label><textarea name="Doświadczenie"></textarea></div>
+<div class="hint">Dane wykorzystamy wyłącznie do kontaktu w sprawie współpracy z Zugo Ops.</div>
+<div class="formActions"><button class="btn primary" type="submit">Wyślij zgłoszenie →</button></div>
+</form></div></div></section>
+
+<section><div class="wrap"><div class="kicker">FAQ</div><h2>Najczęstsze pytania wykonawców.</h2><div class="faq">
+<details><summary>Czy muszę przyjmować każde zlecenie?</summary><p>Nie. Otrzymujesz propozycję i decydujesz, czy dane zlecenie pasuje do Twojej dostępności i zakresu prac.</p></details>
+<details><summary>Czy płacę za dostęp do zleceń?</summary><p>Nie pobieramy opłaty za samo otrzymanie propozycji zlecenia. Szczegółowe zasady współpracy i rozliczeń ustalamy przed rozpoczęciem pracy.</p></details>
+<details><summary>Czy mogę działać tylko na wybranym obszarze?</summary><p>Tak. Podczas dołączenia określamy miasta lub obszar, w którym chcesz realizować zlecenia.</p></details>
+<details><summary>Jakie dokumenty są potrzebne?</summary><p>Zależy to od specjalizacji i rodzaju wykonywanych prac. Ustalamy to indywidualnie podczas weryfikacji wykonawcy.</p></details>
+</div></div></section>
+
+<footer><div class="wrap foot"><img src="../zugo-logo.png" alt="Zugo Ops"><div class="footlinks"><a href="../">Strona główna</a><a href="../zarzadcy/">Dla zarządców</a><a href="../wykonawcy/">Dla wykonawców</a><a href="mailto:kontakt@zugoops.pl">kontakt@zugoops.pl</a></div><span>© 2026 Zugo Ops · Polska</span></div></footer>
+</body></html>
