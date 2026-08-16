@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zugo Ops — operacyjna obsługa usterek dla portfeli mieszkań</title>
+  <meta name="description" content="Zugo Ops przejmuje operacyjną obsługę usterek w portfelach mieszkań — od zgłoszenia i kwalifikacji po wykonawcę, termin, realizację, koszt i zamknięcie sprawy.">
+  <meta name="theme-color" content="#071015">
+  <meta name="contact" content="kontakt@zugoops.pl">
+  <link rel="canonical" href="https://zugoops.pl/">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:title" content="Zugo Ops — operacyjna obsługa usterek bez chaosu">
+  <meta property="og:description" content="Od zgłoszenia do zamkniętej sprawy — Zugo przejmuje koordynację maintenance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zugoops.pl/">
+  <meta property="og:image" content="https://zugoops.pl/og-image.png">
+  <meta property="og:locale" content="pl_PL">
+<style>
+:root{--bg:#071015;--surface:#0f222b;--surface2:#0b181e;--text:#f2f5f6;--muted:#a9b7bd;--mint:#24d7b5;--mint2:#a7f2db;--line:rgba(255,255,255,.095);--lineMint:rgba(36,215,181,.22);--card:rgba(255,255,255,.04);--red:#ff6a63;--max:1180px;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 12% 3%,rgba(36,215,181,.10),transparent 28%),radial-gradient(circle at 88% 12%,rgba(28,133,181,.10),transparent 24%),linear-gradient(180deg,#071015 0%,#09151b 54%,#071015 100%);line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);background:rgba(7,16,21,.82);border-bottom:1px solid rgba(255,255,255,.06)}.navin{height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand-logo{height:42px;width:auto}.links{display:flex;gap:27px;align-items:center;color:#c8d1d5;font-size:14px}.links>a:not(.btn):hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:15px;border:1px solid transparent;font-weight:760;transition:.2s ease}.primary{background:linear-gradient(135deg,var(--mint),#78e8c8);color:#062118;box-shadow:0 14px 40px rgba(36,215,181,.16)}.primary:hover{transform:translateY(-1px);filter:brightness(1.04)}.secondary{border-color:var(--line);background:rgba(255,255,255,.035)}.secondary:hover{background:rgba(255,255,255,.065)}
+.hero{padding:96px 0 74px}.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--lineMint);background:rgba(36,215,181,.055);border-radius:999px;color:#d0f5e8;font-size:13px;font-weight:750;margin-bottom:24px}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px rgba(36,215,181,.12)}h1{margin:0;font-size:clamp(48px,6.1vw,76px);line-height:.99;letter-spacing:-.064em;font-weight:800}.accent{color:var(--mint2)}.heroCopy{max-width:690px;color:var(--muted);font-size:19px;margin:26px 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;color:#83949b;font-size:12px}.micro span:before{content:"✓";color:var(--mint);font-weight:900;margin-right:7px}
+.heroArt{position:relative;border:1px solid var(--line);border-radius:30px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 32px 90px rgba(0,0,0,.30)}.heroArt img{width:100%;height:430px;object-fit:cover;border-radius:22px}.floating{position:absolute;padding:12px 14px;border:1px solid rgba(255,255,255,.11);border-radius:14px;background:rgba(10,23,29,.93);box-shadow:0 18px 40px rgba(0,0,0,.25);font-size:12px;color:#dce6e9}.f1{left:-18px;top:30px}.f2{right:-15px;bottom:30px}.floating b{display:block;color:#fff;font-size:13px}.floating .ok{color:var(--mint2);font-weight:800}
+.audienceStrip{padding:8px 0 0}.audienceGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.audienceMini{padding:17px 18px;border-radius:17px;border:1px solid var(--line);background:var(--card)}.audienceMini b{display:block;font-size:14px}.audienceMini small{color:#7f9198}
+section{padding:92px 0}.kicker{color:var(--mint);text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:.13em;margin-bottom:13px}h2{margin:0;font-size:clamp(36px,4.7vw,56px);line-height:1.03;letter-spacing:-.052em;max-width:860px}.lead{color:var(--muted);font-size:18px;max-width:770px;margin-top:18px}
+.compare{display:grid;grid-template-columns:1fr 64px 1fr;gap:18px;align-items:stretch;margin-top:46px}.compareCard{padding:28px;border-radius:26px;border:1px solid var(--line);background:var(--card)}.compareCard.bad{background:linear-gradient(180deg,rgba(255,106,99,.06),rgba(255,255,255,.025))}.compareCard.good{background:linear-gradient(180deg,rgba(36,215,181,.075),rgba(255,255,255,.025));border-color:var(--lineMint)}.compareHead{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800}.badgeicon{width:34px;height:34px;border-radius:11px;display:grid;place-items:center}.bad .badgeicon{background:rgba(255,106,99,.12);color:var(--red)}.good .badgeicon{background:rgba(36,215,181,.10);color:var(--mint)}.compareCard ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:12px;color:#bbc6cb}.compareCard li{display:flex;gap:10px}.bad li:before{content:"×";color:var(--red);font-weight:900}.good li:before{content:"✓";color:var(--mint);font-weight:900}.compareArt{margin-top:22px;padding:10px;border:1px solid rgba(255,255,255,.07);border-radius:18px;background:#0b171d}.compareArt img{width:100%;height:195px;object-fit:cover;border-radius:13px}.compareArrow{display:grid;place-items:center;color:var(--mint);font-size:31px}
+.flow{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.flowCard{padding:23px;min-height:205px;border:1px solid var(--line);border-radius:22px;background:var(--card)}.num{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;color:var(--mint);background:rgba(36,215,181,.085);border:1px solid rgba(36,215,181,.14);font-size:13px;font-weight:800}.flowCard h3{font-size:19px;margin:36px 0 8px}.flowCard p{margin:0;color:var(--muted);font-size:14px}.flowCard strong{color:var(--mint2)}
+.scope{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}.scopeGrid{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.scopeItem{display:flex;gap:12px;padding:17px;border:1px solid var(--line);border-radius:17px;background:var(--card)}.scopeIcon{flex:0 0 38px;width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:rgba(36,215,181,.08);color:var(--mint)}.scopeItem b{display:block;font-size:14px}.scopeItem small{color:#7f9198}.statusMock{padding:22px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.023));box-shadow:0 30px 80px rgba(0,0,0,.22)}.mockHead{display:flex;justify-content:space-between;gap:18px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.07)}.mockHead b{font-size:17px}.tag{padding:7px 10px;border-radius:999px;border:1px solid rgba(36,215,181,.18);background:rgba(36,215,181,.09);color:var(--mint2);font-size:11px;font-weight:800}.statusList{display:grid;gap:12px;margin-top:18px}.statusRow{display:grid;grid-template-columns:29px 1fr auto;gap:10px;align-items:center;font-size:13px}.statusIcon{width:29px;height:29px;border-radius:9px;background:rgba(36,215,181,.09);color:var(--mint);display:grid;place-items:center;font-weight:900}.time{font-size:11px;color:#74878f}.mockFoot{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.07)}.metric{padding:12px;border-radius:12px;background:rgba(255,255,255,.035)}.metric small{display:block;color:#71858d;font-size:10px}.metric b{font-size:12px}
+.network{border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);background:radial-gradient(circle at 84% 42%,rgba(36,215,181,.08),transparent 28%),rgba(255,255,255,.018)}.networkGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}.checks{display:grid;gap:12px;margin-top:25px;color:#d1dbde}.checks div:before{content:"✓";color:var(--mint);font-weight:900;margin-right:10px}.networkArt{padding:14px;border:1px solid var(--lineMint);border-radius:25px;background:rgba(36,215,181,.045)}.networkArt img{width:100%;height:330px;object-fit:cover;border-radius:18px}
+.pilot{padding-bottom:118px}.pilotBox{padding:48px;border:1px solid var(--lineMint);border-radius:31px;background:radial-gradient(circle at 12% 0%,rgba(36,215,181,.13),transparent 40%),var(--card)}.pilotGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:start}.pilotArt{margin-top:24px;padding:10px;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:#0b171d}.pilotArt img{width:100%;height:245px;object-fit:cover;border-radius:13px}.points{display:grid;gap:9px;margin-top:18px;color:#aab8bd}.points div:before{content:"✓";color:var(--mint);font-weight:900;margin-right:9px}
+.leadForm{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:750;color:#cbd6da}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.10);background:#0b181e;color:var(--text);border-radius:14px;padding:14px 15px;font:inherit;outline:none;transition:.18s ease}.field input,.field select{min-height:50px}.field textarea{min-height:112px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(36,215,181,.55);box-shadow:0 0 0 3px rgba(36,215,181,.08)}.field input::placeholder,.field textarea::placeholder{color:#667a83}.formHint{grid-column:1/-1;color:#71858d;font-size:11px;line-height:1.5}.formActions{grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.formActions .btn{border:0;cursor:pointer}.honey{position:absolute!important;left:-9999px!important;opacity:0!important;pointer-events:none!important}
+.faq{margin-top:44px;display:grid;gap:10px;max-width:930px}details{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:19px 21px}summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--mint);font-size:20px}details[open] summary:after{content:"−"}details p{color:var(--muted);margin:14px 0 2px;max-width:850px}
+footer{border-top:1px solid rgba(255,255,255,.07);padding:31px 0 44px;color:#73858d;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot-logo{height:34px;width:auto;opacity:.9}.foot-links{display:flex;gap:17px;flex-wrap:wrap}.foot a{color:#a7f2db}.foot a:hover{text-decoration:underline}
+@media(max-width:920px){.links>a:not(.btn){display:none}.heroGrid,.scope,.networkGrid,.pilotGrid{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.compareArrow{transform:rotate(90deg)}.flow{grid-template-columns:repeat(2,1fr)}.audienceGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.wrap{width:min(calc(100% - 28px),var(--max))}.navin{height:70px}.brand-logo{height:36px}.nav .btn{min-height:42px;padding:0 14px;font-size:13px}.hero{padding-top:72px}h1{font-size:48px}.heroCopy{font-size:17px}section{padding:72px 0}.audienceGrid,.flow,.scopeGrid,.leadForm{grid-template-columns:1fr}.field.full,.formHint,.formActions{grid-column:1}.heroArt img{height:320px}.f1{left:6px;top:10px}.f2{right:6px;bottom:10px}.compareArt img{height:160px}.networkArt img{height:245px}.mockFoot{grid-template-columns:1fr}.pilotBox{padding:30px 22px}.foot{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap navin"><a href="#top"><img class="brand-logo" src="zugo-logo.png" alt="Zugo Ops"></a><div class="links"><a href="#jak">Jak to działa</a><a href="#zakres">Zakres</a><a href="#dla">Dla kogo</a><a href="#faq">FAQ</a><a class="btn primary" href="#kontakt">Umów rozmowę</a></div></div></nav>
+
+<main id="top">
+<header class="hero"><div class="wrap heroGrid">
+<div><div class="eyebrow"><span class="dot"></span> Operacyjna obsługa techniczna najmu</div><h1>Przejmujemy obsługę usterek. <span class="accent">Ty zarządzasz portfelem.</span></h1><p class="heroCopy">Zgłoszenie, kwalifikacja, wykonawca, termin, realizacja i zamknięcie — Zugo prowadzi sprawę operacyjnie, bez dokładania kolejnej osoby do codziennej koordynacji maintenance.</p><div class="actions"><a class="btn primary" href="#kontakt">Umów rozmowę o pilocie →</a><a class="btn secondary" href="#jak">Zobacz jak działa</a></div><div class="micro"><span>pracujemy z Twoimi fachowcami lub naszymi</span><span>jasne limity kosztowe</span><span>pilotaż na realnych zgłoszeniach</span></div></div>
+<div class="heroArt"><img src="hero-operator.jpg" alt="Operator Zugo Ops przy obsłudze zgłoszenia"><div class="floating f1"><b>Nowe zgłoszenie</b>Brak ciepłej wody<br><span class="ok">✓ triage rozpoczęty</span></div><div class="floating f2"><b>Następny krok</b>Dobór wykonawcy<br><span class="ok">✓ sprawa prowadzona</span></div></div>
+</div></header>
+
+<div class="audienceStrip" id="dla"><div class="wrap audienceGrid">
+<div class="audienceMini"><b>Agencje najmu</b><small>obsługa techniczna portfeli klientów</small></div>
+<div class="audienceMini"><b>Właściciele portfeli</b><small>mieszkania na wynajem</small></div>
+<div class="audienceMini"><b>Property managerowie</b><small>koordynacja wielu lokali</small></div>
+<div class="audienceMini"><b>Fliperzy i inwestorzy</b><small>powtarzalne prace techniczne</small></div>
+</div></div>
+
+<section><div class="wrap"><div class="kicker">Mniej chaosu</div><h2>Ten sam problem. Dwa zupełnie różne procesy.</h2><p class="lead">Zugo nie jest kolejną skrzynką do pilnowania. Różnica polega na tym, że ktoś bierze odpowiedzialność za doprowadzenie sprawy do końca.</p>
+<div class="compare">
+<div class="compareCard bad"><div class="compareHead"><span class="badgeicon">!</span>Bez Zugo</div><ul><li>zgłoszenia rozproszone między telefonem, e-mailem i komunikatorami</li><li>dopytywanie o szczegóły i zdjęcia</li><li>szukanie dostępnego fachowca</li><li>ustalanie terminu i kolejne follow-upy</li><li>pytania o status, koszt i dokumentację</li></ul><div class="compareArt"><img src="chaos.jpg" alt="Chaos w ręcznej obsłudze usterek"></div></div>
+<div class="compareArrow">→</div>
+<div class="compareCard good"><div class="compareHead"><span class="badgeicon">✓</span>Z Zugo</div><ul><li>jedno zgłoszenie uruchamia uporządkowany proces</li><li>Zugo kwalifikuje problem i priorytet</li><li>koordynujemy wykonawcę i termin</li><li>pilnujemy statusu realizacji</li><li>zamykamy sprawę z kosztem i historią</li></ul><div class="compareArt"><img src="relaxed.jpg" alt="Uporządkowany proces obsługi z Zugo Ops"></div></div>
+</div></div></section>
+
+<section id="jak"><div class="wrap"><div class="kicker">Jak działa Zugo Ops</div><h2>Od zgłoszenia do zamknięcia — jeden właściciel procesu.</h2><p class="lead">Każdy etap ma jasny następny krok, status i odpowiedzialność.</p>
+<div class="flow">
+<div class="flowCard"><div class="num">01</div><h3>Przyjęcie zgłoszenia</h3><p>Zbieramy opis problemu i informacje potrzebne do dalszej obsługi.</p></div>
+<div class="flowCard"><div class="num">02</div><h3>Triage i priorytet</h3><p>Oceniamy pilność i kategorię. <strong>Nie każde zgłoszenie od razu wymaga fachowca.</strong></p></div>
+<div class="flowCard"><div class="num">03</div><h3>Dobór wykonawcy</h3><p>Wybieramy właściwą specjalizację i dostępnego wykonawcę.</p></div>
+<div class="flowCard"><div class="num">04</div><h3>Dispatch + fallback</h3><p>Przy braku odpowiedzi proces przechodzi do kolejnej opcji.</p></div>
+<div class="flowCard"><div class="num">05</div><h3>Ustalenie terminu</h3><p>Koordynujemy propozycje terminów i potwierdzenie wizyty.</p></div>
+<div class="flowCard"><div class="num">06</div><h3>Realizacja i status</h3><p>Pilnujemy rozpoczęcia pracy i bieżącego statusu.</p></div>
+<div class="flowCard"><div class="num">07</div><h3>Kontrola kosztów</h3><p>Działamy według ustalonych limitów i zasad akceptacji.</p></div>
+<div class="flowCard"><div class="num">08</div><h3>Zamknięcie i historia</h3><p>Koszt, notatka i historia sprawy zostają przy zgłoszeniu.</p></div>
+</div></div></section>
+
+<section id="zakres"><div class="wrap scope">
+<div><div class="kicker">Co dokładnie przejmujemy</div><h2>Technologia wspiera proces. Zugo przejmuje operacje.</h2><p class="lead">Nie dokładamy panelu, który Twój zespół musi codziennie pilnować. Celem jest wynik: zamknięta, udokumentowana sprawa.</p>
+<div class="scopeGrid">
+<div class="scopeItem"><span class="scopeIcon">✉</span><div><b>Przyjęcie zgłoszeń</b><small>ustrukturyzowany intake</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">⚠</span><div><b>Triage i priorytet</b><small>pilność i specjalizacja</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">👤</span><div><b>Dobór wykonawcy</b><small>preferowany lub backupowy</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">↗</span><div><b>Dispatch + fallback</b><small>kolejne próby przy braku odpowiedzi</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">▣</span><div><b>Terminy</b><small>koordynacja wizyty</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">◉</span><div><b>Status realizacji</b><small>pilnowanie postępu</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">₿</span><div><b>Limity kosztowe</b><small>reguły i akceptacje</small></div></div>
+<div class="scopeItem"><span class="scopeIcon">✓</span><div><b>Zamknięcie</b><small>koszt, notatka, historia</small></div></div>
+</div></div>
+<div class="statusMock"><div class="mockHead"><div><small style="color:#758890">PRZYKŁADOWY STATUS</small><br><b>#184 · cieknąca bateria kuchenna</b></div><span class="tag">W realizacji</span></div><div class="statusList"><div class="statusRow"><span class="statusIcon">✓</span><span>Zgłoszenie przyjęte i zakwalifikowane</span><span class="time">09:14</span></div><div class="statusRow"><span class="statusIcon">✓</span><span>Wykonawca przyjął zlecenie</span><span class="time">09:21</span></div><div class="statusRow"><span class="statusIcon">✓</span><span>Termin zaakceptowany</span><span class="time">09:28</span></div><div class="statusRow"><span class="statusIcon">→</span><span>Wizyta zaplanowana</span><span class="time">dzisiaj</span></div></div><div class="mockFoot"><div class="metric"><small>WYKONAWCA</small><b>Hydraulik</b></div><div class="metric"><small>LIMIT</small><b>do 500 zł</b></div><div class="metric"><small>NASTĘPNY KROK</small><b>Wizyta</b></div></div></div>
+</div></section>
+
+<section class="network"><div class="wrap networkGrid">
+<div><div class="kicker">Twoi fachowcy zostają</div><h2>Masz sprawdzonych wykonawców? Świetnie.</h2><p class="lead">Nie musisz rezygnować z sieci, która działa. Zugo może koordynować Twoich fachowców, korzystać z naszej budowanej sieci albo łączyć oba modele.</p><div class="checks"><div>wykonawcy preferowani i backupowi</div><div>dispatch zgodny z ustalonymi zasadami</div><div>wdrożenie bez wywracania obecnego procesu</div></div></div>
+<div class="networkArt"><img src="contractor.jpg" alt="Wykonawca współpracujący z Zugo Ops"></div>
+</div></section>
+
+<section id="kontakt" class="pilot"><div class="wrap pilotBox"><div class="pilotGrid">
+<div><div class="kicker">Pilotaż Zugo Ops</div><h2>Zbudujmy proces na realnych zgłoszeniach.</h2><p class="lead">Wdrażamy Zugo z pierwszymi portfelami mieszkań. Wspólnie ustawiamy zasady obsługi, limity kosztowe i sieć wykonawców, a następnie mierzymy działanie procesu.</p><div class="points"><div>zakres pilota dopasowany do portfela</div><div>jasne zasady kosztowe i eskalacje</div><div>pomiar czasu obsługi, SLA i skuteczności dispatchu</div></div><div class="pilotArt"><img src="pilot.jpg" alt="Rozmowa o pilotażu Zugo Ops"></div></div>
+<div><div class="kicker">Umów rozmowę</div><h3 style="font-size:27px;margin:0 0 20px;letter-spacing:-.03em">Powiedz nam krótko o swojej firmie.</h3>
+<form class="leadForm" action="https://formsubmit.co/kontakt@zugoops.pl" method="POST">
+<input type="hidden" name="_subject" value="Nowy lead B2B — Zugo Ops"><input type="hidden" name="_next" value="https://zugoops.pl/dziekujemy.html"><input type="hidden" name="_template" value="table"><input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+<div class="field"><label>Imię i nazwisko *</label><input name="Imię i nazwisko" required placeholder="Jan Kowalski"></div>
+<div class="field"><label>Nazwa firmy *</label><input name="Firma" required placeholder="Nazwa firmy"></div>
+<div class="field"><label>Stanowisko</label><input name="Stanowisko" placeholder="Właściciel / Property Manager"></div>
+<div class="field"><label>E-mail firmowy *</label><input name="email" type="email" required placeholder="jan@firma.pl"></div>
+<div class="field"><label>Telefon</label><input name="Telefon" type="tel" placeholder="+48 500 000 000"></div>
+<div class="field"><label>Liczba mieszkań / lokali *</label><select name="Liczba mieszkań" required><option value="" selected disabled>Wybierz zakres</option><option>1–24</option><option>25–49</option><option>50–99</option><option>100–249</option><option>250–499</option><option>500+</option></select></div>
+<div class="field full"><label>Miasto / obszar działania</label><input name="Miasto / obszar" placeholder="np. Zielona Góra"></div>
+<div class="field full"><label>Jak obecnie zarządzacie zgłoszeniami? *</label><select name="Obecny sposób obsługi" required><option value="" selected disabled>Wybierz</option><option>Telefon / SMS</option><option>E-mail</option><option>WhatsApp / komunikator</option><option>CRM / system property management</option><option>Własny proces / arkusz</option><option>Model mieszany</option><option>Inne</option></select></div>
+<div class="field full"><label>Co najbardziej chcesz usprawnić?</label><textarea name="Potrzeba" placeholder="Np. koordynacja fachowców, terminy, statusy, backup wykonawców..."></textarea></div>
+<div class="formHint">Podając dane, prosisz Zugo Ops o kontakt w sprawie swojego zapytania. Dane wykorzystamy wyłącznie do jego obsługi.</div>
+<div class="formActions"><button class="btn primary" type="submit">Wyślij zgłoszenie →</button><a class="contactMail" href="mailto:kontakt@zugoops.pl">kontakt@zugoops.pl</a></div>
+</form></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><div class="kicker">FAQ</div><h2>Najczęstsze pytania przed pilotażem.</h2><div class="faq">
+<details><summary>Czy Zugo jest tylko aplikacją?</summary><p>Nie. Technologia wspiera proces, ale usługa polega na operacyjnej koordynacji zgłoszenia od przyjęcia do zamknięcia.</p></details>
+<details><summary>Czy muszę zrezygnować z własnych fachowców?</summary><p>Nie. Możemy pracować z Twoją obecną siecią, własnymi wykonawcami albo w modelu mieszanym.</p></details>
+<details><summary>Czy każde zgłoszenie trafia od razu do fachowca?</summary><p>Nie. Najpierw oceniamy problem, priorytet i potrzebną specjalizację, a następnie uruchamiamy właściwy krok.</p></details>
+<details><summary>Czy zachowuję kontrolę nad kosztami?</summary><p>Tak. Podczas wdrożenia ustalamy limity i sytuacje wymagające Twojej akceptacji.</p></details>
+<details><summary>Gdzie startuje pilotaż?</summary><p>Startujemy lokalnie i zakres geograficzny ustalamy indywidualnie z pierwszymi klientami.</p></details>
+</div></div></section>
+</main>
+
+<footer><div class="wrap foot"><img class="foot-logo" src="zugo-logo.png" alt="Zugo Ops"><div class="foot-links"><a href="#jak">Jak to działa</a><a href="#zakres">Zakres</a><a href="#kontakt">Pilotaż</a><a href="mailto:kontakt@zugoops.pl">kontakt@zugoops.pl</a></div><div>© 2026 Zugo Ops · Polska</div></div></footer>
+</body>
+</html>
