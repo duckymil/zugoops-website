@@ -33,3 +33,25 @@ section{padding:88px 0}.kicker{text-transform:uppercase;letter-spacing:.13em;fon
 footer{border-top:1px solid rgba(255,255,255,.07);padding:32px 0 44px;color:#788a91;font-size:12px}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.footLogo{height:34px}.footlinks{display:flex;gap:17px;flex-wrap:wrap}.foot a{color:#a7f2db}
 @media(max-width:950px){.links>a:not(.btn){display:none}.heroGrid,.promise,.ctaGrid{grid-template-columns:1fr}.valueStrip{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.step:after{display:none}}
 @media(max-width:650px){.wrap{width:min(calc(100% - 28px),var(--max))}.navin{height:68px}.logo{height:34px}.nav .btn{min-height:42px;padding:0 13px;font-size:12px}.hero{padding-top:62px}h1{font-size:47px}.hero p,.lead{font-size:17px}section{padding:70px 0}.valueStrip,.split,.flow,.promiseGrid,.form,.contactCards{grid-template-columns:1fr}.full,.hint,.formActions{grid-column:1}.ctaBox{padding:29px 21px}.foot{flex-direction:column;align-items:flex-start}}
+
+
+/* Credibility V2 */
+.founderSection{padding-top:30px}
+.founderCard{display:grid;grid-template-columns:.72fr 1.28fr;gap:34px;align-items:center;border:1px solid var(--lineMint);background:radial-gradient(circle at 0 0,rgba(36,215,181,.11),transparent 42%),var(--card);border-radius:28px;padding:34px}
+.founderMark{min-height:250px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(145deg,#0a181e,#102a31);display:grid;place-items:center;position:relative;overflow:hidden}
+.founderMark:before,.founderMark:after{content:"";position:absolute;border:1px solid rgba(36,215,181,.13);border-radius:50%}
+.founderMark:before{width:260px;height:260px}.founderMark:after{width:150px;height:150px}
+.founderInitial{width:88px;height:88px;border-radius:24px;background:linear-gradient(135deg,var(--mint),#71e6c7);display:grid;place-items:center;color:#05241b;font-size:34px;font-weight:950;position:relative;z-index:2;box-shadow:0 18px 45px rgba(36,215,181,.18)}
+.founderMeta{margin-top:22px}.founderMeta b{display:block;font-size:18px}.founderMeta small{color:var(--mint2)}
+.startGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:40px}.startCard{padding:22px;border:1px solid var(--line);background:var(--card);border-radius:20px}.startCard .num{margin-bottom:28px}.startCard h3{font-size:17px;margin:0 0 7px}.startCard p{font-size:13px;color:var(--muted);margin:0}
+.deliverables{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}.deliverable{padding:18px;border-radius:17px;border:1px solid var(--line);background:var(--card);display:flex;gap:13px}.deliverableIcon{flex:0 0 38px;height:38px;border-radius:11px;background:rgba(36,215,181,.09);border:1px solid rgba(36,215,181,.15);display:grid;place-items:center;color:var(--mint);font-weight:900}.deliverable b{display:block;font-size:14px}.deliverable small{color:var(--dim)}
+.ticketDemo{border:1px solid var(--lineMint);background:linear-gradient(180deg,rgba(36,215,181,.055),rgba(255,255,255,.02));border-radius:26px;padding:25px;box-shadow:0 28px 70px rgba(0,0,0,.22)}
+.ticketTop{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding-bottom:17px;border-bottom:1px solid var(--line)}
+.ticketTop small{color:var(--dim)}.ticketTop b{font-size:18px}.ticketStatus{font-size:11px;padding:7px 10px;border-radius:999px;border:1px solid var(--lineMint);background:rgba(36,215,181,.08);color:var(--mint2);font-weight:850}
+.timeline{display:grid;gap:12px;margin-top:19px}.timelineRow{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;font-size:13px}.timelineIcon{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(36,215,181,.09);color:var(--mint);font-weight:900}.timelineTime{color:var(--dim);font-size:11px}
+.ticketMetrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding-top:17px;margin-top:18px;border-top:1px solid var(--line)}.ticketMetric{padding:12px;background:rgba(255,255,255,.03);border-radius:12px}.ticketMetric small{display:block;color:var(--dim);font-size:10px}.ticketMetric b{font-size:12px}
+.legalNotice{font-size:11px;color:var(--dim);margin-top:8px}.legalNotice a{color:var(--mint2);text-decoration:underline;text-underline-offset:2px}
+.legalPage{max-width:900px}.legalPage h2{font-size:28px;margin:38px 0 13px}.legalPage h3{font-size:18px;margin:28px 0 8px}.legalPage p,.legalPage li{color:var(--muted)}.legalPage ul{padding-left:20px}.legalPage strong{color:var(--text)}
+.companyLine{color:#91a3aa}
+@media(max-width:900px){.founderCard{grid-template-columns:1fr}.startGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.founderCard{padding:24px}.startGrid,.deliverables,.ticketMetrics{grid-template-columns:1fr}}
