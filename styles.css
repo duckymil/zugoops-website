@@ -35,3 +35,34 @@ section{padding:88px 0}.strip{padding:0}.kicker{text-transform:uppercase;letter-
 footer{border-top:1px solid rgba(255,255,255,.07);padding:32px 0 44px;color:#788a91;font-size:12px}.foot{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px}.footLogo{height:34px;width:auto}.footlinks{display:flex;gap:17px;flex-wrap:wrap}.foot a{color:#a7f2db}.companyLine{text-align:right}
 @media(max-width:950px){.links{display:none}.menuToggle{display:block}.mobileMenu.open{display:flex;flex-direction:column;gap:4px;padding:8px 20px 18px;border-top:1px solid var(--line)}.mobileMenu a{padding:12px 4px;color:#d5dfe2}.mobileMenu .btn{margin-top:8px}.heroGrid,.promise,.ctaGrid,.founderCard{grid-template-columns:1fr}.valueStrip,.flow,.startGrid,.opsGrid{grid-template-columns:1fr 1fr}.step:after{display:none}.foot{grid-template-columns:1fr}.companyLine{text-align:left}}
 @media(max-width:650px){.wrap{width:min(calc(100% - 28px),var(--max))}.navin{height:68px}.logo{height:34px}.hero{padding-top:62px}h1{font-size:47px}.hero p,.lead{font-size:17px}section{padding:70px 0}.valueStrip,.split,.flow,.startGrid,.opsGrid,.qaGrid,.promiseGrid,.form,.contactGrid{grid-template-columns:1fr}.full,.hint,.legalNotice,.formActions{grid-column:1}.ctaBox{padding:29px 21px}.footlinks{display:grid;gap:10px}.heroVisual{padding:10px}}
+
+
+/* Founder photo + narrative section */
+.founderCardWithPhoto{
+  grid-template-columns:360px 1fr;
+  align-items:center;
+}
+.founderPhotoWrap{
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid var(--lineMint);
+  background:var(--surface);
+  box-shadow:0 24px 70px rgba(0,0,0,.28);
+}
+.founderPhoto{
+  width:100%;
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  object-position:center;
+}
+.founderStory{
+  color:var(--muted);
+  font-size:16px;
+  margin:18px 0 0;
+  max-width:760px;
+}
+@media(max-width:950px){
+  .founderCardWithPhoto{grid-template-columns:1fr}
+  .founderPhotoWrap{max-width:420px}
+}
