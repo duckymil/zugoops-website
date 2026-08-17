@@ -1,11 +1,19 @@
-# Zugo Ops — Production Website V2
+# Zugo Ops — Production V3
 
-Struktura:
-- `/` — strona główna + sekcja o firmie i proces rozpoczęcia współpracy
-- `/zarzadcy/` — oferta, zakres usługi, przykładowy status, formularz klienta
-- `/wykonawcy/` — oferta i formularz wykonawcy
-- `/kontakt/` — kontakt e-mail
-- `/polityka-prywatnosci/` — polityka prywatności
-- `/dziekujemy.html` — potwierdzenie formularza
+Strony:
+- `/` — strona główna
+- `/zarzadcy/` — oferta + FAQ operacyjne + prawdziwy zanonimizowany przebieg QA + formularz
+- `/wykonawcy/` — oferta + warunki współpracy + formularz
+- `/kontakt/` — e-mail + LinkedIn
+- `/polityka-prywatnosci/`
+- `/404.html`
+- `/dziekujemy.html`
 
-Publiczny numer telefonu został celowo usunięty.
+Techniczne:
+- `robots.txt`
+- `sitemap.xml`
+- Open Graph + Twitter Cards
+- JSON-LD ProfessionalService
+- mobilne menu
+- formularze AJAX FormSubmit z polską walidacją i fallbackiem e-mail
+- zoptymalizowane logo / favicon / OG image
