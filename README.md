@@ -1,19 +1,11 @@
-# Zugo Ops — Production V3
+# Zugo Ops — PROPTECH V4
 
-Strony:
-- `/` — strona główna
-- `/zarzadcy/` — oferta + FAQ operacyjne + prawdziwy zanonimizowany przebieg QA + formularz
-- `/wykonawcy/` — oferta + warunki współpracy + formularz
-- `/kontakt/` — e-mail + LinkedIn
-- `/polityka-prywatnosci/`
-- `/404.html`
-- `/dziekujemy.html`
+Kierunek wizualny:
+- mniej typowego AI/SaaS landing page
+- mniej glow i dużych zaokrąglonych kart
+- więcej UI operacyjnego: work orders, statusy, historia sprawy, reguły portfela
+- homepage hero pokazuje przykładowy panel Zugo zamiast ilustracji
+- przygotowana sekcja pod 60-sekundowe demo video
+- zachowana ciemna identyfikacja Zugo + mint
 
-Techniczne:
-- `robots.txt`
-- `sitemap.xml`
-- Open Graph + Twitter Cards
-- JSON-LD ProfessionalService
-- mobilne menu
-- formularze AJAX FormSubmit z polską walidacją i fallbackiem e-mail
-- zoptymalizowane logo / favicon / OG image
+Po nagraniu demo należy zastąpić placeholder w sekcji `#demo` właściwym `<video>` lub embedem.

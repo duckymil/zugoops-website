@@ -66,3 +66,507 @@ footer{border-top:1px solid rgba(255,255,255,.07);padding:32px 0 44px;color:#788
   .founderCardWithPhoto{grid-template-columns:1fr}
   .founderPhotoWrap{max-width:420px}
 }
+
+
+/* Founder photo v2 — original image, display crop only */
+.founderPhotoWrap{
+  aspect-ratio:4/5;
+  max-height:520px;
+}
+.founderPhoto{
+  width:100%;
+  height:100%;
+  aspect-ratio:auto;
+  object-fit:cover;
+  object-position:center 43%;
+}
+@media(max-width:950px){
+  .founderPhotoWrap{
+    aspect-ratio:4/5;
+    max-width:420px;
+  }
+}
+
+
+/* =========================================================
+   PROPTECH V4 — operational product visual language
+   Less "AI landing page", more property operations console.
+   ========================================================= */
+
+:root{
+  --radius-lg:16px;
+  --radius-md:11px;
+  --radius-sm:8px;
+  --console:#081319;
+  --console2:#0b1a21;
+  --hairline:rgba(255,255,255,.075);
+}
+
+/* De-glow / de-template */
+body{
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(180deg,#071015,#09171d 48%,#071015);
+  background-size:64px 64px,64px 64px,auto;
+}
+.nav{background:rgba(7,16,21,.95)}
+.btn{border-radius:9px;min-height:46px}
+.primary{box-shadow:none}
+.eyebrow{border-radius:7px;background:rgba(36,215,181,.04)}
+.heroVisual,.side,.value,.step,.startCard,.opsCard,.promiseItem,.screen,
+.contactCard,.ctaBox,.founderCard,details{
+  border-radius:var(--radius-lg);
+  box-shadow:none;
+}
+.heroVisual{background:var(--console);padding:0}
+section{position:relative}
+.band{background:rgba(255,255,255,.012)}
+h1{letter-spacing:-.052em}
+
+/* Product console hero */
+.opsConsole{
+  border:1px solid rgba(255,255,255,.10);
+  background:var(--console);
+  overflow:hidden;
+  border-radius:14px;
+  box-shadow:0 25px 70px rgba(0,0,0,.30);
+}
+.consoleTop{
+  height:46px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 15px;border-bottom:1px solid var(--hairline);
+  background:#09171d;font-size:11px;color:#83969d;
+}
+.consoleBrand{display:flex;align-items:center;gap:9px;color:#dbe5e8;font-weight:800}
+.consoleDot{width:8px;height:8px;border-radius:50%;background:var(--mint)}
+.consoleLive{display:flex;align-items:center;gap:7px}
+.consoleLive:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint)}
+.consoleShell{display:grid;grid-template-columns:144px 1fr;min-height:410px}
+.consoleSide{
+  border-right:1px solid var(--hairline);padding:15px 10px;background:#08141a;
+}
+.consoleSideLabel{
+  padding:9px 10px;border-radius:7px;color:#758991;font-size:11px;margin-bottom:4px
+}
+.consoleSideLabel.active{
+  background:rgba(36,215,181,.07);color:#c9f7ea;border:1px solid rgba(36,215,181,.12)
+}
+.consoleMain{padding:18px}
+.consoleHeader{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:15px}
+.consoleHeader b{font-size:16px}.consoleHeader small{color:#758991}
+.consoleFilters{display:flex;gap:6px;flex-wrap:wrap}
+.consoleFilter{
+  padding:5px 8px;border:1px solid var(--hairline);border-radius:6px;
+  font-size:9px;color:#82969d;background:#0b1920
+}
+.ticketTable{border:1px solid var(--hairline);border-radius:9px;overflow:hidden}
+.ticketHead,.ticketRow{
+  display:grid;grid-template-columns:58px 1.5fr .8fr .9fr 80px;gap:8px;align-items:center;
+}
+.ticketHead{
+  padding:8px 10px;background:#0c1a21;border-bottom:1px solid var(--hairline);
+  color:#6f848c;font-size:8px;text-transform:uppercase;letter-spacing:.07em
+}
+.ticketRow{
+  padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.055);
+  color:#cbd5d9;font-size:10px
+}
+.ticketRow:last-child{border-bottom:0}
+.ticketRow strong{font-size:10px;color:#f0f4f5}
+.statusChip{
+  width:max-content;padding:4px 7px;border-radius:5px;font-size:8px;font-weight:800;
+  border:1px solid rgba(255,255,255,.08)
+}
+.statusChip.green{color:#9df0d8;background:rgba(36,215,181,.07);border-color:rgba(36,215,181,.16)}
+.statusChip.amber{color:#ffd78a;background:rgba(255,203,102,.06);border-color:rgba(255,203,102,.15)}
+.statusChip.gray{color:#9aabb1;background:rgba(255,255,255,.035)}
+.consoleFooter{
+  display:flex;justify-content:space-between;gap:12px;padding-top:14px;color:#71858d;font-size:9px
+}
+
+/* More product-like section chrome */
+.sectionRule{
+  display:flex;align-items:center;gap:12px;margin-bottom:26px;color:#81939a;font-size:11px;
+  text-transform:uppercase;letter-spacing:.12em
+}
+.sectionRule:after{content:"";height:1px;background:var(--hairline);flex:1}
+.propFeatureGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:15px;margin-top:36px}
+.propPanel{
+  border:1px solid var(--hairline);background:var(--console);border-radius:14px;overflow:hidden
+}
+.propPanelTitle{
+  height:43px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--hairline);padding:0 14px;font-size:11px;color:#80939a
+}
+.propPanelBody{padding:16px}
+.activityItem{
+  display:grid;grid-template-columns:12px 92px 1fr auto;gap:10px;align-items:start;
+  padding:11px 0;border-bottom:1px solid rgba(255,255,255,.055);font-size:11px
+}
+.activityItem:last-child{border:0}
+.activityDot{width:7px;height:7px;border-radius:50%;background:var(--mint);margin-top:5px}
+.activityTime{color:#657b84;font-size:9px}.activityText{color:#cad4d8}
+.activityMeta{color:#758991;font-size:9px}
+.ruleRows{display:grid}
+.ruleRow{
+  display:grid;grid-template-columns:1fr auto;gap:18px;padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,.055);font-size:11px
+}
+.ruleRow:last-child{border:0}.ruleRow span{color:#80939a}.ruleRow b{font-size:10px;color:#dce4e7}
+
+/* Demo CTA */
+.demoBlock{
+  margin-top:38px;border:1px solid rgba(36,215,181,.20);
+  background:#081319;border-radius:14px;overflow:hidden
+}
+.demoVideoPlaceholder{
+  aspect-ratio:16/8;min-height:330px;display:grid;place-items:center;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),
+    radial-gradient(circle at 50% 35%,rgba(36,215,181,.09),transparent 36%),#081319;
+  background-size:42px 42px,42px 42px,auto,auto;text-align:center;padding:25px
+}
+.demoPlay{
+  width:62px;height:62px;border-radius:50%;border:1px solid rgba(36,215,181,.32);
+  display:grid;place-items:center;margin:0 auto 18px;color:var(--mint);font-size:20px;
+  background:rgba(36,215,181,.055)
+}
+.demoVideoPlaceholder b{font-size:20px}.demoVideoPlaceholder p{
+  max-width:520px;margin:8px auto 0;color:#81949c;font-size:13px
+}
+.demoCaption{
+  padding:12px 15px;border-top:1px solid var(--hairline);
+  display:flex;justify-content:space-between;gap:15px;color:#73878f;font-size:10px
+}
+.demoCaption strong{color:#cbd5d9}
+
+/* Founder less "marketing card" */
+.founderCard{
+  border-color:var(--hairline);
+  background:#081319;
+}
+.founderPhotoWrap{border-radius:12px}
+.founderStory{max-width:800px}
+
+/* Manager / contractor operational blocks */
+.opsCard{background:#081319;border-color:var(--hairline)}
+.qaGrid .screen{background:#081319}
+.message{border-radius:7px}
+.ticketStatus,.statusChip{border-radius:5px}
+
+@media(max-width:950px){
+  .consoleShell{grid-template-columns:1fr}
+  .consoleSide{display:none}
+  .propFeatureGrid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .ticketHead{display:none}
+  .ticketRow{grid-template-columns:48px 1fr 90px}
+  .ticketRow > :nth-child(3),.ticketRow > :nth-child(4){display:none}
+  .activityItem{grid-template-columns:12px 1fr auto}
+  .activityTime{display:none}
+  .demoVideoPlaceholder{min-height:260px}
+}
+
+
+/* =========================================================
+   LIGHT PROPTECH V5
+   White-first property operations visual language
+   Zugo mint/teal as accents only
+   ========================================================= */
+
+:root{
+  --bg:#f7f9fa;
+  --bg2:#ffffff;
+  --surface:#ffffff;
+  --surface2:#f1f5f6;
+  --text:#102028;
+  --muted:#5f737c;
+  --dim:#82949c;
+  --mint:#24d7b5;
+  --mint2:#0fae91;
+  --deep:#071015;
+  --teal:#0f222b;
+  --line:rgba(7,16,21,.10);
+  --lineMint:rgba(36,215,181,.30);
+  --card:#ffffff;
+  --console:#081319;
+  --console2:#0b1a21;
+  --hairline:rgba(7,16,21,.08);
+}
+
+html,body{
+  background:#f7f9fa;
+  color:var(--text);
+}
+body{
+  background:
+    linear-gradient(rgba(15,34,43,.025) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(15,34,43,.025) 1px, transparent 1px),
+    linear-gradient(180deg,#fbfcfd,#f7f9fa 52%,#fff);
+  background-size:64px 64px,64px 64px,auto;
+}
+.nav{
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid rgba(7,16,21,.08);
+  box-shadow:0 1px 0 rgba(7,16,21,.03);
+}
+.logo{filter:none}
+.links{color:#50636b}
+.links a:hover,.links a.active{color:#071015}
+.mobileMenu{background:#fff}
+.mobileMenu a{color:#18313b}
+.menuToggle{background:#fff;border-color:rgba(7,16,21,.12)}
+.menuToggle span{background:#071015}
+
+.btn.primary{
+  background:#071015;
+  color:#fff;
+  box-shadow:none;
+}
+.btn.primary:hover{background:#0f222b}
+.btn.secondary{
+  background:#fff;
+  border-color:rgba(7,16,21,.12);
+  color:#102028;
+}
+.eyebrow{
+  color:#0c6f5f;
+  border-color:rgba(36,215,181,.32);
+  background:rgba(36,215,181,.08);
+}
+.hero{padding-top:88px}
+.hero p,.lead{color:var(--muted)}
+.micro{color:#70838b}
+.kicker{color:#0b9f86}
+.accent{color:#0b9f86}
+h1,h2,h3{color:#071015}
+
+.value,.side,.step,.startCard,.opsCard,.promiseItem,.contactCard,
+.ctaBox,.founderCard,details,.propPanel{
+  background:#fff;
+  border-color:rgba(7,16,21,.09);
+  box-shadow:0 10px 30px rgba(20,42,52,.045);
+}
+.side.mint{
+  background:linear-gradient(180deg,#f2fffb,#ffffff);
+  border-color:rgba(36,215,181,.28);
+}
+.band{
+  background:#fff;
+  border-color:rgba(7,16,21,.07);
+}
+.checks{color:#334a54}
+.checks.red{color:#536870}
+
+.num,.deliverableIcon{
+  background:rgba(36,215,181,.10);
+  border-color:rgba(36,215,181,.18);
+  color:#0a927b;
+}
+.step:not(:last-child):after{color:#0da98e}
+.textLink,.contactCard a,.foot a,.legalNotice a{color:#0b917b}
+
+/* Hero product console remains dark as a strong product anchor */
+.opsConsole{
+  border-color:rgba(7,16,21,.12);
+  box-shadow:0 24px 55px rgba(20,42,52,.16);
+}
+.consoleTop{background:#09171d}
+.consoleSide{background:#08141a}
+.consoleMain{background:#081319}
+
+/* Operational blocks get less "AI card", more enterprise UI */
+.sectionRule{color:#6f8189}
+.sectionRule:after{background:rgba(7,16,21,.09)}
+.propPanel{
+  overflow:hidden;
+}
+.propPanelTitle{
+  background:#f6f9fa;
+  border-color:rgba(7,16,21,.08);
+  color:#61757e;
+}
+.propPanelBody{background:#fff}
+.activityItem{border-color:rgba(7,16,21,.065)}
+.activityText{color:#29414b}
+.activityTime,.activityMeta{color:#7d9098}
+.ruleRow{border-color:rgba(7,16,21,.065)}
+.ruleRow span{color:#60747d}
+.ruleRow b{color:#17323c}
+
+/* Demo block light shell */
+.demoBlock{
+  background:#fff;
+  border-color:rgba(7,16,21,.09);
+  box-shadow:0 14px 35px rgba(20,42,52,.05);
+}
+.demoVideoPlaceholder{
+  background:
+    linear-gradient(rgba(15,34,43,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(15,34,43,.025) 1px,transparent 1px),
+    radial-gradient(circle at 50% 35%,rgba(36,215,181,.09),transparent 36%),#f8fbfb;
+  background-size:42px 42px,42px 42px,auto,auto;
+}
+.demoVideoPlaceholder b{color:#071015}
+.demoVideoPlaceholder p{color:#6c8088}
+.demoPlay{
+  background:#071015;
+  color:#24d7b5;
+  border-color:#071015;
+}
+.demoCaption{
+  border-color:rgba(7,16,21,.08);
+  color:#768990;
+}
+.demoCaption strong{color:#203942}
+
+/* Founder */
+.founderCard{
+  background:linear-gradient(180deg,#ffffff,#fbfdfd);
+  border-color:rgba(7,16,21,.09);
+}
+.founderStory{color:#566a73}
+.founderMeta small{color:#0b917b}
+
+/* Manager QA screens remain dark product snapshots */
+.qaGrid .screen{
+  background:#081319;
+  border-color:rgba(7,16,21,.12);
+}
+.screenBar{color:#8ca0a8}
+.screenNote{color:#81949c}
+
+/* Contact / forms */
+.field label{color:#425862}
+.field input,.field select,.field textarea{
+  background:#fff;
+  color:#102028;
+  border-color:rgba(7,16,21,.13);
+}
+.field input::placeholder,.field textarea::placeholder{color:#91a0a6}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:rgba(36,215,181,.65);
+  box-shadow:0 0 0 3px rgba(36,215,181,.12);
+}
+.hint,.legalNotice{color:#7d9097}
+.formStatus{color:#62777f}
+
+/* Footer */
+footer{
+  background:#071015;
+  color:#81949c;
+  border-top:0;
+}
+footer .footLogo{filter:none}
+footer a{color:#b9eee0}
+footer .companyLine{color:#71848c}
+
+/* Legal page */
+.legalPage p,.legalPage li{color:#596d76}
+.legalPage strong{color:#102028}
+
+/* subtle logo-motif decorations */
+.hero:before{
+  content:"";
+  position:absolute;
+  width:260px;height:260px;
+  right:3vw;top:75px;
+  border:1px solid rgba(36,215,181,.10);
+  transform:rotate(45deg);
+  border-radius:34px;
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:110px;height:110px;
+  left:2vw;top:210px;
+  border-left:3px solid rgba(36,215,181,.18);
+  border-bottom:3px solid rgba(36,215,181,.18);
+  transform:rotate(45deg);
+  pointer-events:none;
+}
+.hero > .wrap{position:relative;z-index:2}
+
+/* Large section labels feel more "PropTech publication" */
+section:not(.strip)>.wrap>.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+}
+section:not(.strip)>.wrap>.kicker:before{
+  content:"";
+  width:18px;height:2px;background:#24d7b5;
+}
+
+/* Feature cards slightly squarer */
+.value,.step,.startCard,.opsCard,.promiseItem,.contactCard,details{
+  border-radius:12px;
+}
+.ctaBox,.founderCard{border-radius:18px}
+.heroVisual,.opsConsole,.propPanel,.demoBlock{border-radius:14px}
+
+@media(max-width:950px){
+  .hero:before,.hero:after{display:none}
+}
+
+
+/* Outcome-based value section */
+.outcomesSection{
+  background:#fff;
+  border-top:1px solid rgba(7,16,21,.07);
+  border-bottom:1px solid rgba(7,16,21,.07);
+}
+.outcomesGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin-top:46px;
+  border-top:1px solid rgba(7,16,21,.09);
+  border-left:1px solid rgba(7,16,21,.09);
+}
+.outcomeItem{
+  min-height:255px;
+  padding:30px 34px 34px;
+  border-right:1px solid rgba(7,16,21,.09);
+  border-bottom:1px solid rgba(7,16,21,.09);
+  position:relative;
+  background:#fff;
+}
+.outcomeItem:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:0;
+  height:3px;
+  background:#24d7b5;
+  transition:width .2s ease;
+}
+.outcomeItem:hover:before{width:100%}
+.outcomeIndex{
+  display:block;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.10em;
+  color:#0b9f86;
+  margin-bottom:44px;
+}
+.outcomeItem h3{
+  font-size:24px;
+  line-height:1.12;
+  letter-spacing:-.035em;
+  margin:0 0 12px;
+}
+.outcomeItem p{
+  color:#62757d;
+  max-width:480px;
+  margin:0;
+  font-size:15px;
+}
+@media(max-width:720px){
+  .outcomesGrid{grid-template-columns:1fr}
+  .outcomeItem{min-height:auto}
+}
