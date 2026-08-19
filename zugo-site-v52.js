@@ -57,3 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+/* Floating navigation scroll state */
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".nav");
+  if (!nav) return;
+
+  const syncNavState = () => {
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+  };
+
+  syncNavState();
+  window.addEventListener("scroll", syncNavState, { passive: true });
+});

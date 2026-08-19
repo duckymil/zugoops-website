@@ -588,3 +588,96 @@ html, body {
 }
 .hero h1 { color:#071015 !important; }
 .hero p { color:#5f737c !important; }
+
+
+/* V5.3 — explicit business outcomes directly under hero */
+.outcomesStrong{
+  padding:86px 0;
+  background:#ffffff !important;
+  border-top:1px solid rgba(7,16,21,.08);
+  border-bottom:1px solid rgba(7,16,21,.08);
+}
+.outcomesIntro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:end;
+  margin-bottom:48px;
+}
+.outcomesIntro h2{max-width:620px}
+.outcomesIntro .lead{margin:0;max-width:560px}
+.outcomesGridStrong{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid rgba(7,16,21,.10);
+  border-left:1px solid rgba(7,16,21,.10);
+}
+.outcomesGridStrong .outcomeItem{
+  min-height:320px;
+  padding:30px 28px 32px;
+  border-right:1px solid rgba(7,16,21,.10);
+  border-bottom:1px solid rgba(7,16,21,.10);
+  background:#fff;
+}
+.outcomesGridStrong .outcomeIndex{margin-bottom:54px}
+.outcomesGridStrong .outcomeItem h3{font-size:23px;line-height:1.08}
+.outcomesGridStrong .outcomeItem p{font-size:14px;line-height:1.58}
+@media(max-width:1050px){
+  .outcomesGridStrong{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .outcomesIntro{grid-template-columns:1fr;gap:18px}
+  .outcomesGridStrong{grid-template-columns:1fr}
+  .outcomesGridStrong .outcomeItem{min-height:auto}
+}
+
+
+/* V5.4 — floating sticky navigation inspired by modern PropTech */
+.nav{
+  position:sticky !important;
+  top:14px !important;
+  z-index:1000 !important;
+  width:min(calc(100% - 36px),1180px) !important;
+  margin:14px auto 0 !important;
+  border:1px solid rgba(7,16,21,.09) !important;
+  border-radius:18px !important;
+  background:rgba(255,255,255,.90) !important;
+  backdrop-filter:blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(140%) !important;
+  box-shadow:
+    0 12px 32px rgba(20,42,52,.08),
+    0 2px 8px rgba(20,42,52,.04) !important;
+  transition:
+    box-shadow .22s ease,
+    transform .22s ease,
+    background-color .22s ease !important;
+}
+.nav.scrolled{
+  background:rgba(255,255,255,.96) !important;
+  box-shadow:
+    0 18px 42px rgba(20,42,52,.12),
+    0 4px 12px rgba(20,42,52,.05) !important;
+}
+.navin{
+  height:68px !important;
+  width:100% !important;
+  padding:0 18px !important;
+}
+.mobileMenu{
+  border-top:1px solid rgba(7,16,21,.07) !important;
+  border-radius:0 0 16px 16px !important;
+  background:rgba(255,255,255,.97) !important;
+}
+@media(max-width:720px){
+  .nav{
+    width:min(calc(100% - 20px),1180px) !important;
+    top:8px !important;
+    margin-top:8px !important;
+    border-radius:14px !important;
+  }
+  .navin{
+    height:62px !important;
+    padding:0 12px !important;
+  }
+}
