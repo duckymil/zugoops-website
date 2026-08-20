@@ -9,3 +9,19 @@ Kierunek wizualny:
 - zachowana ciemna identyfikacja Zugo + mint
 
 Po nagraniu demo należy zastąpić placeholder w sekcji `#demo` właściwym `<video>` lub embedem.
+
+
+
+## V5.7 SEO + AI visibility
+- robots.txt: jawnie dozwolony OAI-SearchBot i ChatGPT-User
+- sitemap.xml: odświeżone URL-e i lastmod
+- llms.txt: jednoznaczny opis Zugo Ops
+- schema.org: Organization + WebSite + Service
+- founder + oficjalny LinkedIn w danych strukturalnych
+- dopracowany canonical i meta description
+- bez zmian w obecnym designie
+
+Po wdrożeniu:
+1. zgłoś sitemap.xml w Google Search Console
+2. dodaj domenę do Bing Webmaster Tools
+3. po pilocie dołóż realne case study i demo

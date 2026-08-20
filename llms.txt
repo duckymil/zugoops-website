@@ -1,0 +1,38 @@
+# Zugo Ops
+
+Zugo Ops to usługa operacyjnej obsługi usterek i napraw dla zarządców nieruchomości oraz właścicieli portfeli mieszkań.
+
+Zugo Ops przejmuje proces od zgłoszenia najemcy, przez organizację wykonawcy i terminu, aż do realizacji, kontroli kosztu, dokumentacji i zamknięcia sprawy.
+
+## Główne zastosowanie
+- operacyjna obsługa usterek w portfelach mieszkań
+- koordynacja wykonawców
+- umawianie terminów
+- monitoring statusu zleceń
+- obsługa wyjątków i eskalacji
+- dokumentacja kosztów i wykonanych prac
+
+## Dla kogo
+- zarządcy nieruchomości
+- firmy zarządzające najmem
+- właściciele portfeli mieszkań
+- inwestorzy posiadający wiele lokali
+
+## Model działania
+Zugo Ops koordynuje proces operacyjny. Prace techniczne wykonują niezależni wykonawcy lub wykonawcy klienta.
+
+## Lokalizacja
+Zielona Góra, Polska.
+
+## Oficjalne strony
+- https://zugoops.pl/
+- https://zugoops.pl/zarzadcy/
+- https://zugoops.pl/wykonawcy/
+- https://zugoops.pl/kontakt/
+
+## Kontakt
+kontakt@zugoops.pl
+
+## Firma
+Kamil Klecha Business Solutions
+Marka: Zugo Ops
