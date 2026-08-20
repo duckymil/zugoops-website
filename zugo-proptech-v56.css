@@ -570,3 +570,299 @@ section:not(.strip)>.wrap>.kicker:before{
   .outcomesGrid{grid-template-columns:1fr}
   .outcomeItem{min-height:auto}
 }
+
+
+/* V5.2 cachefix final guards */
+html, body {
+  background-color:#f7f9fa !important;
+  color:#102028 !important;
+}
+.nav {
+  background:rgba(255,255,255,.96) !important;
+  border-bottom-color:rgba(7,16,21,.08) !important;
+}
+.hero {
+  background:
+    radial-gradient(circle at 84% 15%, rgba(36,215,181,.10), transparent 24%),
+    linear-gradient(180deg,#ffffff,#f7f9fa) !important;
+}
+.hero h1 { color:#071015 !important; }
+.hero p { color:#5f737c !important; }
+
+
+/* V5.3 — explicit business outcomes directly under hero */
+.outcomesStrong{
+  padding:86px 0;
+  background:#ffffff !important;
+  border-top:1px solid rgba(7,16,21,.08);
+  border-bottom:1px solid rgba(7,16,21,.08);
+}
+.outcomesIntro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:end;
+  margin-bottom:48px;
+}
+.outcomesIntro h2{max-width:620px}
+.outcomesIntro .lead{margin:0;max-width:560px}
+.outcomesGridStrong{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid rgba(7,16,21,.10);
+  border-left:1px solid rgba(7,16,21,.10);
+}
+.outcomesGridStrong .outcomeItem{
+  min-height:320px;
+  padding:30px 28px 32px;
+  border-right:1px solid rgba(7,16,21,.10);
+  border-bottom:1px solid rgba(7,16,21,.10);
+  background:#fff;
+}
+.outcomesGridStrong .outcomeIndex{margin-bottom:54px}
+.outcomesGridStrong .outcomeItem h3{font-size:23px;line-height:1.08}
+.outcomesGridStrong .outcomeItem p{font-size:14px;line-height:1.58}
+@media(max-width:1050px){
+  .outcomesGridStrong{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .outcomesIntro{grid-template-columns:1fr;gap:18px}
+  .outcomesGridStrong{grid-template-columns:1fr}
+  .outcomesGridStrong .outcomeItem{min-height:auto}
+}
+
+
+/* V5.4 — floating sticky navigation inspired by modern PropTech */
+.nav{
+  position:sticky !important;
+  top:14px !important;
+  z-index:1000 !important;
+  width:min(calc(100% - 36px),1180px) !important;
+  margin:14px auto 0 !important;
+  border:1px solid rgba(7,16,21,.09) !important;
+  border-radius:18px !important;
+  background:rgba(255,255,255,.90) !important;
+  backdrop-filter:blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(140%) !important;
+  box-shadow:
+    0 12px 32px rgba(20,42,52,.08),
+    0 2px 8px rgba(20,42,52,.04) !important;
+  transition:
+    box-shadow .22s ease,
+    transform .22s ease,
+    background-color .22s ease !important;
+}
+.nav.scrolled{
+  background:rgba(255,255,255,.96) !important;
+  box-shadow:
+    0 18px 42px rgba(20,42,52,.12),
+    0 4px 12px rgba(20,42,52,.05) !important;
+}
+.navin{
+  height:68px !important;
+  width:100% !important;
+  padding:0 18px !important;
+}
+.mobileMenu{
+  border-top:1px solid rgba(7,16,21,.07) !important;
+  border-radius:0 0 16px 16px !important;
+  background:rgba(255,255,255,.97) !important;
+}
+@media(max-width:720px){
+  .nav{
+    width:min(calc(100% - 20px),1180px) !important;
+    top:8px !important;
+    margin-top:8px !important;
+    border-radius:14px !important;
+  }
+  .navin{
+    height:62px !important;
+    padding:0 12px !important;
+  }
+}
+
+
+/* =========================================================
+   V5.5 UX PASS
+   Strong sticky header shadow + clearer enterprise hierarchy
+   ========================================================= */
+
+/* Property Meld-like sticky bar: full width, clear bottom shadow */
+.nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1200 !important;
+  width:100% !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:rgba(255,255,255,.97) !important;
+  backdrop-filter:blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter:blur(16px) saturate(140%) !important;
+  box-shadow:
+    0 10px 26px rgba(7,16,21,.12),
+    0 2px 7px rgba(7,16,21,.08) !important;
+}
+.nav.scrolled{
+  box-shadow:
+    0 14px 34px rgba(7,16,21,.16),
+    0 3px 9px rgba(7,16,21,.09) !important;
+}
+.navin{
+  height:74px !important;
+  width:min(calc(100% - 40px),1180px) !important;
+  padding:0 !important;
+  margin:auto !important;
+}
+
+/* clearer primary navigation */
+.links{gap:30px !important}
+.links>a:not(.btn){
+  font-weight:650;
+  color:#334a54 !important;
+}
+.links>a:not(.btn):hover{color:#071015 !important}
+.nav .btn.primary{
+  background:#24d7b5 !important;
+  color:#071015 !important;
+  font-weight:850;
+}
+
+/* Hero spacing now accounts for sticky nav */
+.hero{
+  padding-top:78px !important;
+}
+
+/* stronger hero split */
+.heroGrid{
+  gap:72px !important;
+}
+.hero .actions{
+  margin-top:32px !important;
+}
+.hero .btn.primary{
+  background:#071015 !important;
+  color:#fff !important;
+}
+.hero .btn.secondary{
+  background:#fff !important;
+  color:#071015 !important;
+  border-color:rgba(7,16,21,.14) !important;
+}
+
+/* outcomes section: make the four reasons visually dominant */
+.outcomesStrong{
+  padding:96px 0 !important;
+}
+.outcomesIntro{
+  margin-bottom:54px !important;
+}
+.outcomesGridStrong .outcomeItem{
+  min-height:330px !important;
+  transition:background .18s ease, transform .18s ease;
+}
+.outcomesGridStrong .outcomeItem:hover{
+  background:#f7fbfa !important;
+}
+.outcomesGridStrong .outcomeIndex{
+  font-size:12px !important;
+  margin-bottom:58px !important;
+}
+.outcomesGridStrong .outcomeItem h3{
+  font-size:25px !important;
+  max-width:230px;
+}
+.outcomesGridStrong .outcomeItem p{
+  margin-top:14px !important;
+  color:#596d76 !important;
+}
+
+/* stronger demo CTA */
+.demoBlock{
+  border:1px solid rgba(7,16,21,.12) !important;
+}
+.demoVideoPlaceholder{
+  position:relative;
+}
+.demoVideoPlaceholder:after{
+  content:"Demo wideo po zakończeniu pilota";
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid rgba(7,16,21,.10);
+  color:#50636b;
+  font-size:10px;
+  font-weight:750;
+}
+
+/* product panels feel more like application UI */
+.opsConsole{
+  box-shadow:0 24px 60px rgba(7,16,21,.18) !important;
+}
+.propPanel{
+  box-shadow:0 8px 28px rgba(20,42,52,.045) !important;
+}
+
+/* tighter editorial rhythm */
+section + section{
+  scroll-margin-top:90px;
+}
+
+/* footer stays dark and clear */
+footer{
+  margin-top:0;
+}
+
+/* mobile sticky nav */
+@media(max-width:720px){
+  .nav{
+    top:0 !important;
+    margin:0 !important;
+    border-radius:0 !important;
+  }
+  .navin{
+    width:min(calc(100% - 24px),1180px) !important;
+    height:66px !important;
+  }
+}
+
+
+/* V5.6 — clean live gradient hero; no decorative crosses/grid */
+body{
+  background:#f7f9fa !important;
+  background-image:none !important;
+}
+
+.hero{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 7% 58%, rgba(36,215,181,.13) 0%, rgba(36,215,181,.055) 20%, rgba(36,215,181,0) 42%),
+    radial-gradient(circle at 94% 30%, rgba(15,174,145,.10) 0%, rgba(15,174,145,.04) 22%, rgba(15,174,145,0) 44%),
+    linear-gradient(180deg,#ffffff 0%,#fbfdfd 58%,#f7f9fa 100%) !important;
+}
+
+.hero:before,
+.hero:after{
+  content:none !important;
+  display:none !important;
+}
+
+.hero > .wrap{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+.outcomesStrong,
+.band,
+section{
+  background-image:none;
+}
+
+.opsConsole{
+  background:#081319 !important;
+}
