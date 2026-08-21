@@ -25,3 +25,16 @@ Po wdrożeniu:
 1. zgłoś sitemap.xml w Google Search Console
 2. dodaj domenę do Bing Webmaster Tools
 3. po pilocie dołóż realne case study i demo
+
+
+## V5.8 CRO
+- benefit section separated from process section
+- old compact white strip removed
+- stronger process timeline
+- primary CTA = "Umów demo"
+- sticky mobile demo CTA
+- contact prepared for WhatsApp + Telegram + email + booking
+- form preserved as fallback
+
+To activate:
+BOOKING_URL, WHATSAPP_URL, TELEGRAM_URL
